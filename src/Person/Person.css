@@ -2,9 +2,9 @@
     width: 400px;
     margin: 20px auto;
     padding: 10px 10px 30px;
-    background-color: rgb(57, 96, 168);
-    color: white;
+    background-color: #fff;
+    color: #333;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(12, 24, 44, 0.5);
+    box-shadow: 0 5px 5px rgba(32, 54, 92, 0.3);
     box-sizing: border-box;
 }
