@@ -1,0 +1,37 @@
+
+.yellow {
+    color: rgb(255, 240, 97);
+}
+  
+.bold {
+    font-weight: 700;
+}
+
+.Cockpit button {
+    background-color: rgb(255, 240, 97);
+    border: 2px solid rgb(255, 240, 97);
+    border-radius: 20px;
+    padding: 6px 12px;
+    color: #8b62d0;
+    font: 700 12px Montserrat;
+    cursor: pointer;
+}
+
+.Cockpit button:hover {
+    background-color: rgb(255, 255, 172);
+    color: #8b62d0;
+}
+
+.Cockpit button.Red {
+    background-color: rgba(0,0,0,0);
+    color: rgb(255, 240, 97);
+}
+
+.Cockpit button.Red:hover {
+    background-color: rgba(0,0,0,.3);
+    color: rgb(255, 240, 97);
+}
+
+.Cockpit button:focus {
+    outline: none;
+}
