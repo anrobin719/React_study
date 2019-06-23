@@ -12,3 +12,9 @@
 input:focus {
     outline: none;
 }
+
+@media only screen and (min-width: 500px) {
+    .Person {
+        width: 450px;
+    }
+}

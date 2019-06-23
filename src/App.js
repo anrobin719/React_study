@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
-import Person from './Person/Person'
+import classes from './App.css';
+import Person from './Person/Person';
 
 class App extends Component {
   state = {
@@ -44,52 +44,42 @@ class App extends Component {
   }
 
   render() {
-    const btnStyle = {
-      backgroundColor: "rgb(255, 240, 97)",
-      border: "2px solid rgb(255, 240, 97)",
-      borderRadius: "20px",
-      padding: "6px 12px",
-      color: "#8b62d0",
-      font: "700 12px Montserrat",
-      cursor: "pointer"
-    }
-
     let persons = null;
+    let btnClass = '';
 
     if (this.state.showPersons) {
       persons = (
         <div>
           {this.state.persons.map((person,index) => {
             return <Person
-            click={() => this.deletePersonHandler(index)}
-            name={person.name}
-            age={person.age}
-            key={person.id}
-            changed={(event) => this.nameChangedHandler(event, person.id)} />
+              click={() => this.deletePersonHandler(index)}
+              name={person.name}
+              age={person.age}
+              key={person.id}
+              value={person.name}
+              changed={(event) => this.nameChangedHandler(event, person.id)} />
           })}
         </div>
       );
-
-      btnStyle.backgroundColor = "rgba(0,0,0,0)";
-      btnStyle.color = "rgb(255, 240, 97)";
+      btnClass = classes.Red;
     }
 
-    const classes = [];
+    const assignedClasses = [];
     if (this.state.persons.length <= 2) {
-      classes.push("yellow");
+      assignedClasses.push(classes.yellow);
     }
     if (this.state.persons.length <= 1) {
-      classes.push("bold");
+      assignedClasses.push(classes.bold);
     }
 
 
     return (
-        <div className="App">
+        <div className={classes.App}>
           <h1>Hi, I'm React App!</h1>
-          <p className={classes.join(' ')}>this is really working!</p>
+          <p className={assignedClasses.join(' ')}>this is really working!</p>
           
           <button
-          style={btnStyle}
+          className={btnClass}
           onClick={this.togglePersonsHanlder}>Switch Name</button>
 
           {persons}

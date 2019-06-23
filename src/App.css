@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
 
+
+body {
+  background-image: linear-gradient(140deg, #8b62d0, #76a1e5);
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  height: 700px;
+}
+
 body > * {
   all: unset;
 }
@@ -9,17 +17,39 @@ body > * {
   margin-top: 80px;
 }
 
-body {
-  background-image: linear-gradient(140deg, #8b62d0, #76a1e5);
-  font-family: 'Montserrat', sans-serif;
-  color: #fff;
-  height: 700px;
-}
-
 .yellow {
   color: rgb(255, 240, 97);
 }
 
 .bold {
   font-weight: 700;
+}
+
+.App button {
+  background-color: rgb(255, 240, 97);
+  border: 2px solid rgb(255, 240, 97);
+  border-radius: 20px;
+  padding: 6px 12px;
+  color: #8b62d0;
+  font: 700 12px Montserrat;
+  cursor: pointer;
+}
+
+.App button:hover {
+  background-color: rgb(255, 255, 172);
+  color: #8b62d0;
+}
+
+.App button.Red {
+  background-color: rgba(0,0,0,0);
+  color: rgb(255, 240, 97);
+}
+
+.App button.Red:hover {
+  background-color: rgba(0,0,0,.3);
+  color: rgb(255, 240, 97);
+}
+
+.App button:focus {
+  outline: none;
 }
